@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Directory - High-Impact Workflows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header */
+        header {
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #1a1a1a;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #666;
+            max-width: 700px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 60px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .hero-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .hero-card-content {
+            padding: 24px;
+        }
+
+        .hero-card h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .hero-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            padding: 40px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .filter-label {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999;
+            margin-bottom: 16px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 1px solid #e5e5e5;
+            border-radius: 24px;
+            background: #fff;
+            color: #1a1a1a;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: #1a1a1a;
+            background: #f8f8f8;
+        }
+
+        .filter-btn.active {
+            background: #1a1a1a;
+            color: #fff;
+            border-color: #1a1a1a;
+        }
+
+        /* Tools Grid */
+        .tools-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999;
+            margin-bottom: 32px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 32px;
+        }
+
+        .tool-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+        }
+
+        .tool-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .tool-card-content {
+            padding: 24px;
+        }
+
+        .tool-category {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .tool-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .tool-card p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #e5e5e5;
+            padding: 40px 0;
+            margin-top: 80px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a> / AI Tools
+            </div>
+            <h1>AI Tools Directory: High-Impact Workflows</h1>
+            <p class="subtitle">Put AI to work and unlock speed, insight, and decision making at scale.</p>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <a href="#" class="hero-card">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/3rBpepnoYrBMNiJiManqVa/6288615b7466f77faa64ec03c9e79207/image16x9-ai-play-contract-operations716x424.webp?fm=webp" alt="Contract Operations">
+                    <div class="hero-card-content">
+                        <h2>Transform static contracts into operational data</h2>
+                        <p>Extract data from contracts and power operational workflows with live signals for marketing, support, and sales teams.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="hero-card">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/2WnytfcuYaUdNeF4I6b3BR/25974f50f6340f5538cd1b8e6c65240e/image16x9-campaign-concept-ideation.webp?fm=webp" alt="Campaign Concepts">
+                    <div class="hero-card-content">
+                        <h2>Generate high-impact campaign concepts</h2>
+                        <p>Use AI to turn a single brief into multiple campaign directions in seconds.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="hero-card">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/3Sc5SRbjXmFoP5nyXBU1sS/9e984947810feaa28a7ef7bc47b03a46/image16x9-event-attendee-research.webp?fm=webp" alt="Event Production">
+                    <div class="hero-card-content">
+                        <h2>Accelerate event production from planning to follow-up</h2>
+                        <p>Streamline event research and personalize outreach by using AI to enrich attendee profiles.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-label">Filter</div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Tools</button>
+                <button class="filter-btn" data-category="marketing">Marketing & Creative</button>
+                <button class="filter-btn" data-category="digital">Digital Product</button>
+                <button class="filter-btn" data-category="operations">Operations</button>
+                <button class="filter-btn" data-category="physical">Physical Product</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-section">
+        <div class="container">
+            <div class="section-title">AI Tools</div>
+            <div class="tools-grid">
+                <a href="#" class="tool-card" data-category="marketing">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/3SRUrcwBlUJSK5U50KEWgs/8399ba2ae83412a7957effcdfd83992e/image16x9-asset-localization.webp?fm=webp" alt="Asset Localization">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Marketing & Creative</div>
+                        <h3>Localize image and copy variants at scale</h3>
+                        <p>Instantly adapt marketing content for any region, ensure cultural relevance, and maintain global brand consistency.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="tool-card" data-category="marketing">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/oV0luqxvcvTgydfFPQRj9/54c0780691607c294adfe97bd58ac466/image16x9-ai-play-brand-compliance-checker.webp?fm=webp" alt="Brand Compliance">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Marketing & Creative</div>
+                        <h3>Run instant brand and compliance reviews</h3>
+                        <p>Use our brand checker to analyze marketing assets against your brand guidelines, provide a pass/fail assessment, and notify designers on what to change.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="tool-card" data-category="marketing">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/2WnytfcuYaUdNeF4I6b3BR/25974f50f6340f5538cd1b8e6c65240e/image16x9-campaign-concept-ideation.webp?fm=webp" alt="Campaign Concepts">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Marketing & Creative</div>
+                        <h3>Generate high-impact campaign concepts</h3>
+                        <p>Use our free AI marketing campaign generator to turn rough campaign ideas into insight-driven directions in minutes, and visualize them across channels.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="tool-card" data-category="digital">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/2PfugRb9M4PvVB3SDwJE3i/b93ff0300299f999e2cc2f6e2717d827/image16x9-competitive-product-analysis.webp?fm=webp" alt="Competitive Analysis">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Digital Product</div>
+                        <h3>Automate competitor product research</h3>
+                        <p>Instantly run a competitive analysis that benchmarks your performance against top competitors using up-to-date intelligence sourced directly from the web.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="tool-card" data-category="operations">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/3rBpepnoYrBMNiJiManqVa/6288615b7466f77faa64ec03c9e79207/image16x9-ai-play-contract-operations716x424.webp?fm=webp" alt="Contract Operations">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Operations</div>
+                        <h3>Transform static contracts into operational data</h3>
+                        <p>Extract data from contracts and power operational workflows with live signals that trigger workflows for teams like marketing, support, and sales.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="tool-card" data-category="marketing">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/3JuvdDrz2FZtdfwDffMNUj/51c60343fafba6568b25e0fe65d9d0d0/image16x9-ai-play-customer-insights-marketing.webp?fm=webp" alt="Customer Insights">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Marketing & Creative</div>
+                        <h3>Discover marketing insights in customer feedback</h3>
+                        <p>Turn customer feedback data from reviews and social media into actionable insights that inform your marketing strategy and messaging.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="tool-card" data-category="digital">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/6laX2wls0QNGp16jgFi6c/772c157edba6da8dce276d580f2d90fc/image16x9-ai-play-customer-insights-product.webp?fm=webp" alt="Product Feedback">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Digital Product</div>
+                        <h3>Analyze product feedback at scale</h3>
+                        <p>Use AI customer feedback analysis to turn product feedback data into executive-ready reports and ground every product decision in the voice of your customer.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="tool-card" data-category="marketing">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/3Sc5SRbjXmFoP5nyXBU1sS/9e984947810feaa28a7ef7bc47b03a46/image16x9-event-attendee-research.webp?fm=webp" alt="Event Production">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Marketing & Creative</div>
+                        <h3>Accelerate event production from planning to follow-up</h3>
+                        <p>Leverage AI tools for event planning to uncover attendee insights, craft tailored invites and follow-ups, and generate engaging agenda content.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="tool-card" data-category="operations">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/3D61itiA6PigIaWRgE173L/98746ba9df4173ca865581ab18f12d8b/imag16x9-customized-status-summaries.webp?fm=webp" alt="Executive Briefings">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Operations</div>
+                        <h3>Auto-generate executive briefings</h3>
+                        <p>Use AI to generate tailored briefings for executives based on their unique needs and potential questions.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="tool-card" data-category="physical">
+                    <img src="https://images.ctfassets.net/wl95ljfippl8/QgjTk02VsB9PGEng95yat/947cb315fbe68f20b20b7d47a4aa3e1b/image16x9-ai-play-product-content-merchandising716x424.webp?fm=webp" alt="Product Merchandising">
+                    <div class="tool-card-content">
+                        <div class="tool-category">Physical Product</div>
+                        <h3>Visualize new ways to merchandise your product line</h3>
+                        <p>Turn basic product details and on-white images to a fully merchandised, market-ready product catalog with product names and descriptions.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Tools Directory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const toolCards = document.querySelectorAll('.tool-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const category = button.getAttribute('data-category');
+
+                // Filter tools
+                toolCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

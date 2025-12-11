@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "title": "AI Tools Directory: High-Impact Workflows",
+    "subtitle": "Put AI to work and unlock speed, insight, and decision making at scale.",
+    "total_tools": 10,
+    "categories": [
+      "Marketing & Creative",
+      "Digital Product",
+      "Operations",
+      "Physical Product"
+    ]
+  },
+  "hero_tools": [
+    {
+      "id": 1,
+      "title": "Transform static contracts into operational data",
+      "description": "Extract data from contracts and power operational workflows with live signals for marketing, support, and sales teams.",
+      "category": "Operations",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/3rBpepnoYrBMNiJiManqVa/6288615b7466f77faa64ec03c9e79207/image16x9-ai-play-contract-operations716x424.webp?fm=webp",
+      "link": "/ai-plays/contract-operations",
+      "featured": true,
+      "tags": ["contract-management", "data-extraction", "automation", "operations"],
+      "use_cases": ["contract-processing", "workflow-automation", "sales-enablement"],
+      "price_tier": "enterprise"
+    },
+    {
+      "id": 2,
+      "title": "Generate high-impact campaign concepts",
+      "description": "Use AI to turn a single brief into multiple campaign directions in seconds.",
+      "category": "Marketing & Creative",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/2WnytfcuYaUdNeF4I6b3BR/25974f50f6340f5538cd1b8e6c65240e/image16x9-campaign-concept-ideation.webp?fm=webp",
+      "link": "/ai-plays/campaign-concept-ideation",
+      "featured": true,
+      "tags": ["marketing", "campaign-generation", "creative", "ideation"],
+      "use_cases": ["campaign-planning", "creative-development", "marketing-strategy"],
+      "price_tier": "professional"
+    },
+    {
+      "id": 3,
+      "title": "Accelerate event production from planning to follow-up",
+      "description": "Streamline event research and personalize outreach by using AI to enrich attendee profiles.",
+      "category": "Marketing & Creative",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/3Sc5SRbjXmFoP5nyXBU1sS/9e984947810feaa28a7ef7bc47b03a46/image16x9-event-attendee-research.webp?fm=webp",
+      "link": "/ai-plays/event-attendee-research",
+      "featured": true,
+      "tags": ["event-management", "research", "personalization", "outreach"],
+      "use_cases": ["event-planning", "attendee-engagement", "follow-up-automation"],
+      "price_tier": "professional"
+    }
+  ],
+  "all_tools": [
+    {
+      "id": 4,
+      "title": "Localize image and copy variants at scale",
+      "description": "Instantly adapt marketing content for any region, ensure cultural relevance, and maintain global brand consistency.",
+      "category": "Marketing & Creative",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/3SRUrcwBlUJSK5U50KEWgs/8399ba2ae83412a7957effcdfd83992e/image16x9-asset-localization.webp?fm=webp",
+      "link": "/ai-plays/localize-images-copy",
+      "featured": false,
+      "tags": ["localization", "content-adaptation", "branding", "global-marketing"],
+      "use_cases": ["international-marketing", "content-localization", "brand-management"],
+      "price_tier": "enterprise"
+    },
+    {
+      "id": 5,
+      "title": "Run instant brand and compliance reviews",
+      "description": "Use our brand checker to analyze marketing assets against your brand guidelines, provide a pass/fail assessment, and notify designers on what to change.",
+      "category": "Marketing & Creative",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/oV0luqxvcvTgydfFPQRj9/54c0780691607c294adfe97bd58ac466/image16x9-ai-play-brand-compliance-checker.webp?fm=webp",
+      "link": "/ai-plays/brand-and-compliance-checker",
+      "featured": false,
+      "tags": ["brand-compliance", "quality-assurance", "design-review", "automation"],
+      "use_cases": ["brand-management", "asset-review", "compliance-checking"],
+      "price_tier": "professional"
+    },
+    {
+      "id": 6,
+      "title": "Automate competitor product research",
+      "description": "Instantly run a competitive analysis that benchmarks your performance against top competitors using up-to-date intelligence sourced directly from the web.",
+      "category": "Digital Product",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/2PfugRb9M4PvVB3SDwJE3i/b93ff0300299f999e2cc2f6e2717d827/image16x9-competitive-product-analysis.webp?fm=webp",
+      "link": "/ai-plays/competitive-feature-radar",
+      "featured": false,
+      "tags": ["competitive-analysis", "market-research", "product-intelligence", "benchmarking"],
+      "use_cases": ["market-analysis", "product-strategy", "competitive-intelligence"],
+      "price_tier": "professional"
+    },
+    {
+      "id": 7,
+      "title": "Discover marketing insights in customer feedback",
+      "description": "Turn customer feedback data from reviews and social media into actionable insights that inform your marketing strategy and messaging.",
+      "category": "Marketing & Creative",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/3JuvdDrz2FZtdfwDffMNUj/51c60343fafba6568b25e0fe65d9d0d0/image16x9-ai-play-customer-insights-marketing.webp?fm=webp",
+      "link": "/ai-plays/marketing-customer-insights",
+      "featured": false,
+      "tags": ["customer-insights", "feedback-analysis", "marketing-strategy", "sentiment-analysis"],
+      "use_cases": ["customer-research", "marketing-optimization", "messaging-development"],
+      "price_tier": "professional"
+    },
+    {
+      "id": 8,
+      "title": "Analyze product feedback at scale",
+      "description": "Use AI customer feedback analysis to turn product feedback data into executive-ready reports and ground every product decision in the voice of your customer.",
+      "category": "Digital Product",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/6laX2wls0QNGp16jgFi6c/772c157edba6da8dce276d580f2d90fc/image16x9-ai-play-customer-insights-product.webp?fm=webp",
+      "link": "/ai-plays/product-feedback-management",
+      "featured": false,
+      "tags": ["product-feedback", "customer-voice", "analytics", "reporting"],
+      "use_cases": ["product-development", "feedback-management", "decision-support"],
+      "price_tier": "enterprise"
+    },
+    {
+      "id": 9,
+      "title": "Auto-generate executive briefings",
+      "description": "Use AI to generate tailored briefings for executives based on their unique needs and potential questions.",
+      "category": "Operations",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/3D61itiA6PigIaWRgE173L/98746ba9df4173ca865581ab18f12d8b/imag16x9-customized-status-summaries.webp?fm=webp",
+      "link": "/ai-plays/customized-status-summaries",
+      "featured": false,
+      "tags": ["executive-communication", "reporting", "automation", "briefings"],
+      "use_cases": ["executive-reporting", "status-updates", "communication-automation"],
+      "price_tier": "enterprise"
+    },
+    {
+      "id": 10,
+      "title": "Visualize new ways to merchandise your product line",
+      "description": "Turn basic product details and on-white images to a fully merchandised, market-ready product catalog with product names and descriptions.",
+      "category": "Physical Product",
+      "image_url": "https://images.ctfassets.net/wl95ljfippl8/QgjTk02VsB9PGEng95yat/947cb315fbe68f20b20b7d47a4aa3e1b/image16x9-ai-play-product-content-merchandising716x424.webp?fm=webp",
+      "link": "/ai-plays/product-content-merchandising",
+      "featured": false,
+      "tags": ["product-merchandising", "catalog-generation", "e-commerce", "visual-merchandising"],
+      "use_cases": ["product-catalog", "merchandising", "e-commerce-optimization"],
+      "price_tier": "professional"
+    }
+  ],
+  "pricing_tiers": {
+    "professional": {
+      "name": "Professional",
+      "price_range": "$29-$99/month",
+      "target_market": "small-medium businesses",
+      "transaction_volume": "high-volume"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price_range": "$299-$999/month",
+      "target_market": "large enterprises",
+      "transaction_volume": "low-volume-high-value"
+    }
+  }
+}
